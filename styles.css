@@ -1,0 +1,1605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    background-color: #F5F0E8;
+    color: #2D2B28;
+}
+
+:root {
+    --jungle-green: #1B4D3E;
+    --jungle-dark: #0F3328;
+    --beige: #E8DCC8;
+    --beige-dark: #D4C4A8;
+    --beige-light: #F5F0E8;
+    --accent-gold: #C4A43A;
+    --white: #FFFFFF;
+    --dark: #2D2B28;
+    --gray: #6B6A67;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header */
+.header {
+    background: var(--jungle-green);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.whatsapp-header {
+    background: #25D366;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.whatsapp-header:hover {
+    transform: scale(1.05);
+    background: #128C7E;
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 77, 62, 0.25);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide-content {
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.slide-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.slide-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.reviews-badge {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: var(--jungle-green);
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent-gold);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Tour Cards */
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.tour-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.tour-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-content {
+    padding: 25px;
+}
+
+.tour-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--jungle-green);
+    margin-bottom: 10px;
+}
+
+.tour-duration {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tour-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin: 15px 0;
+}
+
+.tour-price small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.tour-description {
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.booking-box {
+    background: var(--beige);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 15px 0;
+}
+
+.booking-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--jungle-green);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.booking-box input, .booking-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.booking-box input:focus, .booking-box select:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.whatsapp-book-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-book-btn:hover {
+    background: #128C7E;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================ */
+/* ABOUT SECTION - MODERN STYLE */
+/* ============================================ */
+
+/* ============================================ */
+/* ABOUT SECTION - MODERN & CLEAN */
+/* ============================================ */
+
+/* ============================================ */
+/* ABOUT SECTION - MODERN & CLEAN */
+/* ============================================ */
+
+/* ============================================ */
+/* ABOUT SECTION - CORRECT LAYOUT */
+/* ============================================ */
+
+.about {
+    background: var(--beige);
+    padding: 80px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* ============================================ */
+/* LEFT COLUMN - PROFILE + VEHICLE IMAGES */
+/* ============================================ */
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Vehicle Image - Same size as profile */
+.vehicle-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-image:hover {
+    transform: translateY(-3px);
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ============================================ */
+/* RIGHT COLUMN - BIO, VEHICLE DETAILS, LICENSE */
+/* ============================================ */
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-text h3 i {
+    color: var(--accent-gold);
+    font-size: 1.8rem;
+}
+
+.bio {
+    color: var(--dark);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Vehicle Details Card */
+.vehicle-details-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.vehicle-details-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--jungle-green);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.vehicle-details-card h4 i {
+    color: var(--accent-gold);
+}
+
+.vehicle-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vehicle-features span {
+    background: var(--beige-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--jungle-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vehicle-features span i {
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+}
+
+/* License Section */
+.license {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.08);
+}
+
+.license-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--beige);
+}
+
+.license-item:last-child {
+    border-bottom: none;
+}
+
+.license-item i {
+    width: 28px;
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+}
+
+.license-item span {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* ============================================ */
+/* RESPONSIVE - TABLET */
+/* ============================================ */
+
+@media (max-width: 968px) {
+    .about {
+        padding: 60px 0;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .about-left {
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .profile-image, .vehicle-image {
+        max-width: 100%;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5rem;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .about-text h3 i {
+        font-size: 1.5rem;
+    }
+    
+    .bio {
+        text-align: center;
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVE - MOBILE */
+/* ============================================ */
+
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 0;
+    }
+    
+    .about-left {
+        max-width: 280px;
+    }
+    
+    .vehicle-details-card {
+        padding: 15px;
+    }
+    
+    .vehicle-details-card h4 {
+        font-size: 1rem;
+    }
+    
+    .vehicle-features span {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+    
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-text h3 i {
+        font-size: 1.3rem;
+    }
+    
+    .bio {
+        font-size: 0.9rem;
+    }
+    
+    .license {
+        padding: 18px;
+    }
+    
+    .license-item {
+        gap: 10px;
+        padding: 8px 0;
+    }
+    
+    .license-item i {
+        width: 24px;
+        font-size: 0.9rem;
+    }
+    
+    .license-item span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Gallery */
+/* Gallery - Slide from Bottom Animation */
+/* Gallery */
+/* ============================================ */
+/* GALLERY - SLIDE FROM BOTTOM ANIMATION */
+/* ============================================ */
+
+/* ============================================ */
+/* GALLERY SECTION - EQUAL SIZE GRID */
+/* ============================================ */
+
+.memories-section {
+    background: var(--beige-light);
+    padding: 60px 0;
+    overflow: visible;
+}
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+/* Card Styles - Equal Size (Perfect Squares) */
+.gallery-card {
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFade 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    aspect-ratio: 1 / 1;
+    /* This makes every card a perfect square */
+}
+
+/* Staggered delays for each card (up to 12) */
+.gallery-card:nth-child(1) { animation-delay: 0.05s; }
+.gallery-card:nth-child(2) { animation-delay: 0.10s; }
+.gallery-card:nth-child(3) { animation-delay: 0.15s; }
+.gallery-card:nth-child(4) { animation-delay: 0.20s; }
+.gallery-card:nth-child(5) { animation-delay: 0.25s; }
+.gallery-card:nth-child(6) { animation-delay: 0.30s; }
+.gallery-card:nth-child(7) { animation-delay: 0.35s; }
+.gallery-card:nth-child(8) { animation-delay: 0.40s; }
+.gallery-card:nth-child(9) { animation-delay: 0.45s; }
+.gallery-card:nth-child(10) { animation-delay: 0.50s; }
+.gallery-card:nth-child(11) { animation-delay: 0.55s; }
+.gallery-card:nth-child(12) { animation-delay: 0.60s; }
+
+/* Slide Up + Fade Animation */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Remove old stack-mode styles */
+.gallery-wrapper.stack-mode .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-wrapper.stack-mode .gallery-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    transform: none;
+    aspect-ratio: 1 / 1;
+}
+
+/* ============================================ */
+/* RESPONSIVE GALLERY */
+/* ============================================ */
+
+/* Tablet: 2 columns */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .gallery-wrapper.stack-mode .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .memories-section {
+        padding: 50px 0;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallery-wrapper.stack-mode .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .memories-section {
+        padding: 40px 0;
+    }
+}
+/* Reviews */
+.reviews-embed {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+/* ============================================ */
+/* REVIEWS ONLY SECTION - GOOGLE REVIEWS STYLES */
+/* ============================================ */
+
+.reviews-only {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.rating-summary {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rating-stars {
+    font-size: 2.5rem;
+    color: #f4c542;
+    margin-bottom: 10px;
+}
+
+.rating-score {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin-bottom: 5px;
+}
+
+.rating-count {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Review Stats Bars */
+.reviews-stats {
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    width: 55px;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.stat-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--beige);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background: var(--accent-gold);
+    border-radius: 10px;
+}
+
+.stat-percent {
+    width: 40px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+/* Sample Review Cards */
+.sample-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.review-card {
+    background: var(--beige-light);
+    padding: 20px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.review-header i {
+    font-size: 2rem;
+    color: var(--accent-gold);
+}
+
+.reviewer-info strong {
+    display: block;
+    color: var(--jungle-green);
+}
+
+.review-stars-small {
+    color: #f4c542;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.review-card p {
+    color: var(--dark);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.review-date {
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.google-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Map Container */
+.map-container {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.map-address {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--jungle-green);
+    font-weight: 600;
+}
+
+.map-address i {
+    margin-right: 8px;
+    color: var(--accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reviews-only {
+        padding: 25px;
+    }
+    
+    .sample-reviews {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .rating-stars {
+        font-size: 1.8rem;
+    }
+    
+    .rating-score {
+        font-size: 1.4rem;
+    }
+}
+/*
+.map-placeholder {
+    background: var(--beige);
+    height: 450px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    flex-direction: column;
+    color: var(--gray);
+}
+*/
+/* Footer */
+.footer {
+    background: var(--jungle-green);
+    color: white;
+    text-align: center;
+    padding: 60px 0 30px;
+}
+
+.whatsapp-footer {
+    background: #25D366;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-footer:hover {
+    transform: scale(1.05);
+    background: #128C7E;
+}
+
+.btn-google {
+    background: #4285F4;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+    transform: scale(1.05);
+    background: #3367D6;
+}
+
+/* MODAL STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 24px;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-close {
+    position: sticky;
+    top: 15px;
+    right: 20px;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--gray);
+    cursor: pointer;
+    z-index: 10;
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 15px 0 0;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--beige-dark);
+    color: var(--jungle-green);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 30px;
+    padding-top: 0;
+}
+
+.modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin-bottom: 10px;
+}
+
+.modal-duration {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--jungle-green);
+    margin: 15px 0;
+}
+
+.price-options {
+    background: var(--beige);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+.price-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: var(--white);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.price-option:hover {
+    transform: translateX(5px);
+}
+
+.price-option.selected {
+    border-color: var(--accent-gold);
+    background: var(--beige-light);
+}
+
+.price-option-name {
+    font-weight: 700;
+    color: var(--jungle-green);
+}
+
+.price-option-price {
+    font-weight: 800;
+    color: var(--jungle-green);
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.highlight-item {
+    background: var(--beige);
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--jungle-green);
+}
+
+.info-section {
+    margin: 25px 0;
+}
+
+.info-section h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--jungle-green);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.info-list li.not-allowed:before {
+    content: "✗";
+    color: #e74c3c;
+}
+
+.modal-booking {
+    background: var(--beige);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 25px 0;
+}
+
+.modal-booking label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--jungle-green);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-booking input, .modal-booking select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.modal-booking input:focus, .modal-booking select:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.modal-whatsapp-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.modal-whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .container {
+        padding: 0 20px;
+    }
+    .hero-slider {
+        height: 60vh;
+        min-height: 500px;
+    }
+    .slide-content h1 {
+        font-size: 2.2rem;
+    }
+    .slide-content p {
+        font-size: 1rem;
+    }
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .gallery-wrapper.stack-mode .gallery-card {
+        width: 220px;
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .modal-title {
+        font-size: 1.4rem;
+    }
+    .highlights {
+        gap: 10px;
+    }
+    .highlight-item {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Itinerary Timeline Styles */
+.itinerary-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.itinerary-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.itinerary-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.itinerary-content {
+    flex: 1;
+    padding-bottom: 25px;
+}
+
+.itinerary-time {
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.itinerary-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--jungle-green);
+    margin-bottom: 5px;
+}
+
+.itinerary-description {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.itinerary-locations {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--jungle-green);
+    background: var(--beige);
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.itinerary-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.itinerary-badge.optional {
+    background: #3498db;
+    color: white;
+}
+
+.itinerary-badge.extra-fee {
+    background: #e67e22;
+    color: white;
+}
+
+.itinerary-line {
+    position: absolute;
+    left: 25px;
+    width: 2px;
+    height: 30px;
+    background: var(--beige-dark);
+    transform: translateX(-50%);
+}
+
+/* For responsive */
+@media (max-width: 768px) {
+    .itinerary-timeline {
+        padding-left: 15px;
+    }
+    .itinerary-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .itinerary-line {
+        left: 20px;
+    }
+}
+
+/* ============================================ */
+/* ICON SIZE ADJUSTMENTS - Add this entire section */
+/* ============================================ */
+
+/* Make all icons smaller by default */
+i, .fas, .far, .fab {
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+/* Header icons */
+.header .logo i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* WhatsApp button icons */
+.whatsapp-header i,
+.whatsapp-footer i,
+.whatsapp-book-btn i,
+.modal-whatsapp-btn i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+}
+
+/* Section title icons */
+.section-title i {
+    font-size: 1.8rem;
+    margin-right: 12px;
+    color: var(--accent-gold);
+}
+
+/* Tour title icons */
+.tour-title i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    color: var(--accent-gold);
+}
+
+/* Tour duration icons */
+.tour-duration i {
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+/* Booking box labels */
+.booking-box label i {
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+/* About section icons */
+.about-text h3 i {
+    font-size: 1.8rem;
+    margin-right: 12px;
+    color: var(--accent-gold);
+}
+
+.license i {
+    font-size: 0.9rem;
+    margin-right: 8px;
+    color: var(--accent-gold);
+}
+
+/* Vehicle showcase icons */
+.vehicle-showcase p i {
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+/* Review stars */
+.reviews-badge i,
+.reviews-embed i.fa-star {
+    font-size: 0.9rem;
+    margin-right: 2px;
+    color: #f4c542;
+}
+
+/* Footer icons */
+.footer i {
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+/* Modal icons */
+.modal-title i,
+.modal-duration i,
+.info-section h4 i,
+.modal-booking h4 i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    color: var(--accent-gold);
+}
+
+/* Itinerary icons */
+.itinerary-icon i {
+    font-size: 1.3rem !important;
+    margin-right: 0 !important;
+}
+
+/* Price option icons */
+.price-option-name i {
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+/* Highlight items */
+.highlight-item i {
+    font-size: 0.8rem;
+    margin-right: 6px;
+}
+
+/* Info list icons */
+.info-list li i {
+    font-size: 0.85rem;
+    margin-right: 10px;
+}
+
+/* ============================================ */
+/* HEADING SIZE ADJUSTMENTS */
+/* ============================================ */
+
+/* Main logo heading */
+.logo h1 {
+    font-size: 1.5rem;  /* Reduced from 1.8rem */
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.2rem;  /* Reduced from 2.8rem */
+}
+
+/* Tour card titles */
+.tour-title {
+    font-size: 1.3rem;  /* Reduced from 1.6rem */
+}
+
+/* About section heading */
+.about-text h3 {
+    font-size: 1.6rem;  /* Reduced from 2rem */
+}
+
+/* Modal title */
+.modal-title {
+    font-size: 1.5rem;  /* Reduced from 1.8rem */
+}
+
+/* Info section headings */
+.info-section h4 {
+    font-size: 1.1rem;  /* Slightly smaller */
+}
+
+/* Hero slider heading */
+.slide-content h1 {
+    font-size: 3rem;  /* Reduced from 4rem for mobile */
+}
+
+/* Hero slider paragraph */
+.slide-content p {
+    font-size: 1.1rem;  /* Reduced from 1.3rem */
+}
+
+/* Footer heading */
+.footer h3 {
+    font-size: 1.4rem;
+}
+
+/* Price display */
+.tour-price {
+    font-size: 1.6rem;  /* Reduced from 2rem */
+}
+
+/* ============================================ */
+/* RESPONSIVE ADJUSTMENTS FOR MOBILE */
+/* ============================================ */
+
+@media (max-width: 768px) {
+    /* Smaller icons on mobile */
+    i, .fas, .far, .fab {
+        font-size: 0.85em;
+    }
+    
+    /* Smaller headings on mobile */
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title i {
+        font-size: 1.3rem;
+    }
+    
+    .tour-title {
+        font-size: 1.1rem;
+    }
+    
+    .tour-title i {
+        font-size: 1rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-title {
+        font-size: 1.2rem;
+    }
+    
+    .slide-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tour-price {
+        font-size: 1.3rem;
+    }
+    
+    /* Smaller badge text */
+    .reviews-badge {
+        font-size: 0.8rem;
+    }
+}

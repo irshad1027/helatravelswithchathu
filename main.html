@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hela Travels with Chathu - Sri Lanka Private Tours</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <h1><i class="fas fa-map-marked-alt"></i> Hela Travels with Chathu</h1>
+            <p><i class="fas fa-car"></i> Private Tours • Sri Lanka</p>
+        </div>
+        <a href="#" class="whatsapp-header" id="headerWhatsappBtn">
+            <i class="fab fa-whatsapp"></i> WhatsApp Now
+        </a>
+    </div>
+</header>
+
+<section class="hero-slider">
+    <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('images/sigiriya.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1><i class="fas fa-mountain"></i> Sigiriya Rock Fortress</h1>
+                        <p>Ancient wonder of the world <i class="fas fa-circle"></i> UNESCO Heritage Site</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/kandy.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1><i class="fas fa-landmark"></i> Kandy City of Arts</h1>
+                        <p>Temple of Tooth <i class="fas fa-circle"></i> Cultural Heart of Sri Lanka</p>
+                       <!-- <div class="reviews-badge"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 450+ Google Reviews</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('images/yala.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1><i class="fas fa-paw"></i> Yala National Park</h1>
+                        <p>Leopards <i class="fas fa-circle"></i> Elephants <i class="fas fa-circle"></i> Wildlife Adventure</p>
+                       <!-- <div class="reviews-badge"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 450+ Google Reviews</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-compass"></i> Explore Our Tours</h2>
+        <p class="section-subtitle">Handcrafted experiences to discover the real Sri Lanka</p>
+        <div class="tours-grid" id="toursGrid">
+            <!-- Tour 1 - Sigiriya -->
+            <div class="tour-card" data-tour="sigiriya">
+                <div class="tour-image"><img src="images/sigiriya.jpg" alt="Sigiriya Rock"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-mountain"></i> Sigiriya & Dambulla</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Full Day | 14-16 Hours</div>
+                    <div class="tour-price">$60 <small>/ person</small></div>
+                    <p class="tour-description">Climb the ancient Lion Rock fortress, explore cave temples, and enjoy a wildlife safari.</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date1" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people1">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Sigiriya & Dambulla', 'date1', 'people1')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 2 - Kandy -->
+            <div class="tour-card" data-tour="kandy">
+                <div class="tour-image"><img src="images/kandy.jpg" alt="Kandy City"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-landmark"></i> Kandy City Experience</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Full Day | 10-12 Hours</div>
+                    <div class="tour-price">$60 <small>/ person</small></div>
+                    <p class="tour-description">Visit Temple of Tooth Relic, Royal Botanical Gardens, and a tea factory.</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date2" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people2">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Kandy City Tour', 'date2', 'people2')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 3 - Galle -->
+            <div class="tour-card" data-tour="galle">
+                <div class="tour-image"><img src="images/bentota.jpg" alt="Galle Fort"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-fort"></i> Galle & Bentota Tour</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Full Day | 12-14 Hours</div>
+                    <div class="tour-price">$50 <small>/ person</small></div>
+                    <p class="tour-description">Explore Dutch Fort, enjoy beach time, and experience coastal beauty.</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date3" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people3">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Galle & Bentota', 'date3', 'people3')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 4 - Colombo Fruit -->
+            <div class="tour-card" data-tour="colombo-fruit">
+                <div class="tour-image"><img src="images/foodcourt.jpg" alt="Colombo City"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-city"></i> Colombo Fruit & City Tour</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Half Day | 4 Hours</div>
+                    <div class="tour-price">$40 <small>/ person</small></div>
+                    <p class="tour-description">Discover Colombo's highlights and taste exotic Sri Lankan fruits.</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date4" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people4">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Colombo Fruit Tour', 'date4', 'people4')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 5 - Tuk Tuk -->
+            <div class="tour-card" data-tour="tuktuk">
+                <div class="tour-image"><img src="images/tuktuk.jpeg" alt="Tuk Tuk Tour"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-motorcycle"></i> Tuk Tuk City Tour</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Half Day | 4 Hours</div>
+                    <div class="tour-price">$35 <small>/ person</small></div>
+                    <p class="tour-description">Zip through Colombo in a traditional three-wheeler. Fun and authentic!</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date5" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people5">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Tuk Tuk Tour', 'date5', 'people5')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 6 - Scooter -->
+            <div class="tour-card" data-tour="scooter">
+                <div class="tour-image"><img src="images/scooter.png" alt="Scooter Tour"></div>
+                <div class="tour-content">
+                    <h3 class="tour-title"><i class="fas fa-scooter"></i> Scooter Solo Tour</h3>
+                    <div class="tour-duration"><i class="far fa-clock"></i> Half Day | 3 Hours</div>
+                    <div class="tour-price">$30 <small>/ person</small></div>
+                    <p class="tour-description">Self-drive adventure. Explore Colombo at your own pace. License required.</p>
+                    <div class="booking-box">
+                        <label><i class="fas fa-calendar-alt"></i> Select your date</label>
+                        <input type="date" id="date6" class="tour-date" min="2025-05-01">
+                        <label><i class="fas fa-users"></i> Number of travelers</label>
+                        <select id="people6">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <button class="whatsapp-book-btn" onclick="bookTour('Scooter Tour', 'date6', 'people6')">
+                            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about">
+    <div class="container">
+        <div class="about-content">
+            <!-- LEFT COLUMN: Profile Image + Vehicle Image (Stacked) -->
+            <div class="about-left">
+                <div class="profile-image">
+                    <img src="images/profile.png" alt="Chathu - Your Local Guide">
+                </div>
+            </div>
+            
+            <!-- RIGHT COLUMN: Bio, Vehicle Details, License -->
+            <div class="about-text">
+                <h3><i class="fas fa-user-tie"></i> Meet Your Local Guide</h3>
+               <p class="bio">I'm <strong>Chathuranga Lakmal</strong>, but my guests just call me <strong>"Chathu"</strong>. Born and raised in <strong>Colombo</strong>,
+                 I've been sharing the soul of Sri Lanka with travelers since <strong>2014</strong> — over a decade of experience and still counting. What stays with me isn't just the places we visit; it's the laughter, the conversations, and the friendships we build along the way. I don't see myself as just a guide; I'm your local brother, your photographer, your storyteller, and your friend. When you travel with me, you're not a tourist — you're family. Let's create memories you'll talk about for a lifetime.</p>
+                <!-- Vehicle Details -->
+                <div class="vehicle-details-card">
+                    <h4><i class="fas fa-car"></i> Modern Vehicle</h4>
+                    <div class="vehicle-features">
+                        <span><i class="fas fa-wind"></i> Air Conditioning</span>
+                        <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                        <span><i class="fas fa-battery-full"></i> Phone Chargers</span>
+                        <span><i class="fas fa-water"></i> Bottled Water</span>
+                    </div>
+                </div>
+                
+                <!-- License Section -->
+                <div class="license">
+                    <div class="license-item">
+                        <i class="fas fa-id-card"></i>
+                        <span>Government Licensed Tourist Guide</span>
+                    </div>
+                    <div class="license-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>First Aid & Safety Certified</span>
+                    </div>
+                    <div class="license-item">
+                        <i class="fas fa-language"></i>
+                        <span>English, Sinhala, Tamil & Russian Speaking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MEMORIES SECTION WITH SMOOTH SPREADING ANIMATION -->
+<section class="section memories-section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-camera-retro"></i> Memories With Our Travelers</h2>
+        <p class="section-subtitle">Real moments, real smiles from happy explorers</p>
+        <div class="gallery-wrapper stack-mode" id="galleryWrapper">
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 1: GOOGLE REVIEWS ONLY -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-comment-dots"></i> What Travelers Say</h2>
+        <p class="section-subtitle">Real reviews from our happy guests on Google</p>
+        <div class="reviews-only">
+            <!-- Rating Summary -->
+            <div class="rating-summary">
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="rating-score">5 out of 5</div>
+                <div class="rating-count">Based on Google Reviews</div>
+            </div>
+
+            <!-- Review Stats Bars -->
+            <div class="reviews-stats">
+                <div class="stat-row">
+                    <span class="stat-label">5 star</span>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 85%;"></div></div>
+                    <span class="stat-percent">100%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">4 star</span>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 1%;"></div></div>
+                    <span class="stat-percent">1%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">3 star</span>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 1%;"></div></div>
+                    <span class="stat-percent">1%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">2 star</span>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 1%;"></div></div>
+                    <span class="stat-percent">1%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">1 star</span>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 1%;"></div></div>
+                    <span class="stat-percent">1%</span>
+                </div>
+            </div>
+
+            <!-- Sample Reviews -->
+            <div class="sample-reviews">
+                <div class="review-card">
+                    <div class="review-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="reviewer-info">
+                            <strong>Neena Audina</strong>
+                            <div class="review-stars-small">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Had an amazing experience exploring the Dambulla Caves whilst being taught the history and cultural background of each cave by our tour guide Jatu. Even when we were driving along the path to reach both the Dabulla Caves and the Sigiria rock site, Jatu provided mini stops at the well preserved historical sites and shared some stories about them too which was awesome. I also want to mention the trekking guide that was with us as we climbed up the Sigiria rock was a champion, he’s been doing this for 15 years and still manages to complete the climb, share some historical context against the Sigiria sites and share some laughs at the same time. Truly an experience I’d encourage others to attempt!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="reviewer-info">
+                            <strong>Joselito Geronimo</strong>
+                            <div class="review-stars-small">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"We had an amazing experience visiting Sigiriya Rock Fortress and Dambulla Cave Temple, all thanks to our wonderful guide and driver, Chathu.
+From start to finish, Chathu was professional, friendly, and very knowledgeable. He made the journey smooth and comfortable, and shared fascinating insights about the history and culture of Sri Lanka, which made the experience even more meaningful. His driving was safe and reliable, and he always made sure we were well taken care of.
+We truly appreciated his patience, flexibility, and warm personality. If you’re planning a trip to Sigiriya and Dambulla, we highly recommend Chathu—he will make your tour unforgettable!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="reviewer-info">
+                            <strong>Elena Senatorova</strong>
+                            <div class="review-stars-small">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Me and my daughter were in Sri Lanka some months ago and had a wonderful tour to Sigiriya with Chathu. He is a wonderful guide! We are very thankful for the well-organised and very interesting trip!"</p>
+                </div>
+            </div>
+
+            <!-- Google Button -->
+            <div class="google-btn-container">
+                <a href="https://www.google.com/maps/place/Hela+travels+with+Chathu/@6.9531552,79.8622207,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae2592b077a16cf:0x606c1150b1d20244!8m2!3d6.9531499!4d79.8647956!16s%2Fg%2F11z16vg35t?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" class="btn-google" target="_blank">
+                    <i class="fab fa-google"></i> Read All Reviews on Google
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2: LIVE GOOGLE MAP LOCATION -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Find Us on Map</h2>
+        <p class="section-subtitle">Visit our location in Sigiriya, Sri Lanka</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4750408730793!2d79.862220674362!3d6.953155218022667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2592b077a16cf%3A0x606c1150b1d20244!2sHela%20travels%20with%20Chathu!5e0!3m2!1sen!2slk!4v1776144091442!5m2!1sen!2slk" 
+                width="100%" 
+                height="400" 
+                style="border:0; border-radius: 20px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            <div class="map-address">
+                <i class="fas fa-location-dot"></i> Hela Travels with Chathu, Sigiriya, Sri Lanka
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <h3><i class="fas fa-map-marked-alt"></i> Ready for an Unforgettable Adventure?</h3>
+        <a href="#" class="whatsapp-footer" id="footerWhatsappBtn">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <p><i class="fas fa-phone-alt"></i> +94 70 325 9919 | <i class="fas fa-envelope"></i> travelwithchathu@gmail.com</p>
+        <p><i class="fas fa-location-dot"></i> Based in Sigiriya | Tours Across All Sri Lanka</p>
+        <p style="margin-top: 30px;"><i class="far fa-copyright"></i> 2025 Hela Travels with Chathu - Private Tours Sri Lanka</p>
+    </div>
+</footer>
+
+<!-- Modal for Tour Details -->
+<div id="tourModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body" id="modalBody">
+            <!-- Content will be dynamically loaded -->
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

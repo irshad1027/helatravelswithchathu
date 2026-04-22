@@ -62,7 +62,7 @@ After exploring Sigiriya, you have the choice to unwind with a leisurely lunch o
             { time: "1.5 hours", title: "Hiriwadunna Village Experience", description: "Break time, photo stop, lunch, guided tour, sightseeing, walk, local snacks", icon: "fas fa-tree", optional: true, extraFee: true },
             { time: "2 hours", title: "Wildlife Safari", description: "Exciting jeep safari through national park. Spot elephants and wildlife", icon: "fas fa-paw", optional: true, extraFee: true },
             { time: "3.5 hours", title: "Return Drive", description: "Scenic drive back to your drop-off location", icon: "fas fa-car" },
-            { time: "Dropoff", title: "Dropoff at your location", description: "10 drop-off locations available", locations: ["Colombo", "Negombo", "Ja-Ela", "Minuwangoda", "Hikkaduwa", "Bentota", "Galle", "Mount Lavinia", "Kalutara"], icon: "fas fa-flag-checkered" }
+            { time: "Dropoff", title: "Dropoff at your location", description: "10 drop-off locations available", locations: ["Colombo", "Negombo"], icon: "fas fa-flag-checkered" }
         ]
     },
     kandy: {

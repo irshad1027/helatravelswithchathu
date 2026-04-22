@@ -569,7 +569,8 @@ function buildGallery() {
     const images = [
         'memory1.jpeg', 'memory2.jpeg', 'memory3.jpeg',
         'memory4.jpeg', 'memory5.jpeg', 'memory6.jpeg',
-        'memory7.jpeg', 'memory8.jpeg', 'memory9.jpeg'
+        'memory7.jpeg', 'memory8.jpeg', 'memory9.jpeg',
+        'memory10.jpeg', 'memory11.jpeg', 'memory12.jpeg'
     ];
     
     gallery.innerHTML = '';

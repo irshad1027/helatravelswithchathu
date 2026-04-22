@@ -1660,3 +1660,54 @@ i, .fas, .far, .fab {
         font-size: 0.8rem;
     }
 }
+/* FORCE MODAL TO WORK - EMERGENCY FIX */
+.modal {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    z-index: 99999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.modal.show {
+    display: flex !important;
+}
+
+.modal-content {
+    background: white !important;
+    width: 90% !important;
+    max-width: 800px !important;
+    max-height: 85vh !important;
+    border-radius: 24px !important;
+    overflow-y: auto !important;
+    position: relative !important;
+}
+
+.modal-body {
+    padding: 30px !important;
+    padding-top: 10px !important;
+}
+
+.modal-close {
+    position: sticky !important;
+    top: 10px !important;
+    right: 10px !important;
+    float: right !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    background: white !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 10px 10px 0 0 !important;
+    z-index: 10 !important;
+}

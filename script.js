@@ -365,12 +365,20 @@ let selectedPriceOption = 'basic';
 
 // Open Modal
 function openModal(tourId) {
+    console.log("openModal called for:", tourId);
+    
     currentTour = tourId;
     const modal = document.getElementById('tourModal');
     const modalBody = document.getElementById('modalBody');
     
+    console.log("modal found:", modal);
+    console.log("modalBody found:", modalBody);
+    
     const tour = tourData[tourId];
-    if (!tour) return;
+    if (!tour) {
+        console.error("Tour not found:", tourId);
+        return;
+    }
     
     // Build itinerary HTML
     let itineraryHTML = '';
@@ -406,6 +414,7 @@ function openModal(tourId) {
         `;
     }
     
+    // Clear and set new content
     modalBody.innerHTML = `
         <h2 class="modal-title">${tour.title}</h2>
         <div class="modal-duration"><i class="far fa-clock"></i> ${tour.duration}</div>
@@ -495,8 +504,11 @@ function openModal(tourId) {
         </div>
     `;
     
+    // Show modal
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
+    
+    console.log("Modal should now be visible");
 }
 
 // Select price option

@@ -26,7 +26,14 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
+}
+
+/* Mobile container padding */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
 }
 
 /* Header */
@@ -625,6 +632,10 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 /* GALLERY SECTION - EQUAL SIZE GRID */
 /* ============================================ */
 
+/* ============================================ */
+/* GALLERY SECTION - EQUAL SIZE GRID */
+/* ============================================ */
+
 .memories-section {
     background: var(--beige-light);
     padding: 60px 0;
@@ -654,10 +665,9 @@ border: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(50px);
     animation: slideUpFade 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
     aspect-ratio: 1 / 1;
-    /* This makes every card a perfect square */
 }
 
-/* Staggered delays for each card (up to 12) */
+/* Staggered delays for each card */
 .gallery-card:nth-child(1) { animation-delay: 0.05s; }
 .gallery-card:nth-child(2) { animation-delay: 0.10s; }
 .gallery-card:nth-child(3) { animation-delay: 0.15s; }
@@ -667,9 +677,6 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 .gallery-card:nth-child(7) { animation-delay: 0.35s; }
 .gallery-card:nth-child(8) { animation-delay: 0.40s; }
 .gallery-card:nth-child(9) { animation-delay: 0.45s; }
-.gallery-card:nth-child(10) { animation-delay: 0.50s; }
-.gallery-card:nth-child(11) { animation-delay: 0.55s; }
-.gallery-card:nth-child(12) { animation-delay: 0.60s; }
 
 /* Slide Up + Fade Animation */
 @keyframes slideUpFade {
@@ -716,7 +723,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================ */
-/* RESPONSIVE GALLERY */
+/* RESPONSIVE GALLERY - BETTER MOBILE */
 /* ============================================ */
 
 /* Tablet: 2 columns */
@@ -735,8 +742,8 @@ border: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
-/* Mobile: 1 column */
-@media (max-width: 480px) {
+/* Mobile: 1 column - FULL WIDTH (No extra space) */
+@media (max-width: 550px) {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -748,6 +755,25 @@ border: 1px solid rgba(255, 255, 255, 0.1);
     
     .memories-section {
         padding: 40px 0;
+    }
+    
+    /* Make cards take full width on mobile */
+    .gallery-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile: Ensure no horizontal scroll */
+@media (max-width: 480px) {
+    .memories-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    
+    .gallery-grid {
+        gap: 12px;
     }
 }
 /* Reviews */

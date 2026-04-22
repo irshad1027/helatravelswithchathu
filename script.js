@@ -181,7 +181,7 @@ The tour also includes a visit to a traditional Ceylon tea factory and plantatio
             { time: "30 minutes", title: "Drive to Galle", description: "Continue to historic Galle", icon: "fas fa-car" },
             { time: "1 hour", title: "Galle Fort", description: "Explore historic Galle Fort, walk along ramparts", icon: "fas fa-building" },
             { time: "2.25 hours", title: "Return Drive", description: "Return via Southern Expressway", icon: "fas fa-car" },
-            { time: "Dropoff", title: "Dropoff at your location", description: "7 drop-off locations available", locations: ["Wattala", "Negombo", "Colombo", "Mount Lavinia", "Wadduwa", "Moratuwa", "Kalutara"], icon: "fas fa-flag-checkered" }
+            { time: "Dropoff", title: "Dropoff at your location", description: "7 drop-off locations available", locations: ["Negombo", "Colombo"], icon: "fas fa-flag-checkered" }
         ]
     },
     'colombo-fruit': {

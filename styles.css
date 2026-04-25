@@ -11,7 +11,6 @@ body {
     color: #2D2B28;
 }
 
-
 :root {
     --jungle-green: #1B4D3E;
     --jungle-dark: #0F3328;
@@ -38,10 +37,11 @@ body {
 }
 
 /* Header */
+
 .header {
     background: var(--jungle-green);
     color: white;
-    padding: 20px 0;
+    padding: 32px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,6 +53,86 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+/* Header Right Container */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Google Translate Button Styling */
+#google_translate_element {
+    display: inline-block;
+}
+
+.goog-te-gadget-simple {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.goog-te-gadget-simple:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.02) !important;
+}
+
+.goog-te-gadget-simple span {
+    color: white !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+    display: none;
+}
+
+.goog-te-gadget-simple::before {
+    content: '\f0ac';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 8px;
+    color: white;
+}
+
+.goog-te-gadget-simple::after {
+    content: 'Translate';
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white !important;
+    margin-left: 5px;
+}
+
+/* Hide "Powered by Google" text */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    font-size: 0 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    #google_translate_element {
+        width: 100%;
+    }
+    
+    .goog-te-gadget-simple {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .logo h1 {

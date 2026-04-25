@@ -654,3 +654,27 @@ document.addEventListener('DOMContentLoaded', function() {
 window.selectPriceOption = selectPriceOption;
 window.bookFromModal = bookFromModal;
 window.openModal = openModal;
+
+// ============================================
+// CUSTOM LANGUAGE TRANSLATION - NO BANNER
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const languageSelect = document.getElementById('language-select');
+    
+    if (languageSelect) {
+        languageSelect.addEventListener('change', function() {
+            var lang = this.value;
+            var currentUrl = window.location.href;
+            
+            if (lang === 'en') {
+                // Reload to original English page
+                window.location.reload();
+            } else {
+                // Use Google Translate service without banner
+                var translateUrl = 'https://translate.google.com/translate?hl=en&sl=en&tl=' + lang + '&u=' + encodeURIComponent(currentUrl);
+                window.open(translateUrl, '_blank');
+            }
+        });
+    }
+});
